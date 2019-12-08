@@ -23,15 +23,35 @@
 
 
 // Generator Example
-function* sayNames() {
-  yield 'Mason';
-  yield 'Darius';
-  yield 'Liam';
+// function* sayNames() {
+//   yield 'Mason';
+//   yield 'Darius';
+//   yield 'Liam';
+// }
+
+// const name = sayNames();
+
+// console.log(name.next().value);
+// console.log(name.next().value);
+// console.log(name.next().value);
+// console.log(name.next());
+
+// ID Creator
+function* createIds() {
+  let index = 1;
+
+  while(true) {
+    yield index++;
+  }
 }
 
-const name = sayNames();
+const gen = createIds();
 
-console.log(name.next().value);
-console.log(name.next().value);
-console.log(name.next().value);
-console.log(name.next());
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
